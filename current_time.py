@@ -11,6 +11,6 @@ response = requests.get(f'https://timeapi.io/api/Time/current/coordinate?latitud
 
 
 init_time = (response["time"])
-print(f"The time in the befinning of the game is: {init_time}")
+print(f"The time in the beginning of the game is: {init_time}")
 
 
