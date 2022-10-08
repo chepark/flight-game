@@ -1,4 +1,7 @@
-# This file is place where params and functions are called and combined together.
+# This file is a place 
+# where params and functions are called 
+# and combined together.
+
 import user_input
 import rand_airport
 import current_gps
