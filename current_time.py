@@ -12,4 +12,3 @@ def get_airport_time(airport_latitude, airport_longitude):
     init_time = init_time.time().strftime("%H:%M")
     print(f"The time of the current airport is {init_time}")
     return {'time': init_time, 'hour': init_hour, 'min': init_min}
-
