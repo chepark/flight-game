@@ -17,6 +17,7 @@ def choose_your_destination():
                    f"If you want to fly to {airport_list[4]}, write 5.\n"
                    f"Enter your number: "))
     new_location = ""
+    
     if choice == 1:
         new_location = airport_list[0];
     elif choice == 2:

@@ -29,21 +29,21 @@ def list_of_time_goals(airport_time):
     time4 = time4.time().strftime('%H:%M')
     time5 = init_time - timedelta(hours=2)
     time5 = time5.time().strftime('%H:%M')
-    list_of_time = [time1,time2,time3,time4,time5]
+    list_of_time = [time2,time3,time4,time5]
     return list_of_time
 
-#this function is used to generate time goal within our limit
-# ?? Where is this function used? 
+# check whatsapp
 def generate_random_timegoal ():
     time_goal = random.choice (list_of_time_goals())
     print(f"Find in which airort the time is: {time_goal}. ")
+    return time_goal
 
 
 def generate_rand_time_dif(airport_time):
     init_time = datetime.strptime(f"{airport_time['hour']}:{airport_time['min']}:00", "%H:%M:%S")
     
     #generate random number to generate the goal
-    random_dif =  (random.randint(-2, 2))
+    random_dif =  (random.randint(-2, 1))
 
 #calculating new goal time using datetime, timedelta
     if random_dif>0:
@@ -63,18 +63,10 @@ def generate_rand_time_dif(airport_time):
 
 #this function can be used only in the beginning! because +2/-2 can end up out of our current range
 def generate_game_goal(airport_time):
-    
     if user_data.total_trials == 0: 
         goal_time = generate_rand_time_dif(airport_time)
         print(f"Choose the airport where the local time is {goal_time} from the list below.")
     else: 
-        goal_time = generate_game_goal()
-    
-    return goal_time
-
-
-#generate_game_goal()
-
-
-
+        goal_time = generate_random_timegoal()
+    return {'time': goal_time}
 

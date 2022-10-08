@@ -30,12 +30,17 @@ def calculate_co2():
         
     # UPDATE current_airport AFTER EACH FLIGHT
     user_data.current_airport = chosen_airport
-    
+
     # RESET chosen_airport
     user_data.new_location = ""
 
-    print(f"Your flight from {user_data.current_airport} to {chosen_airport} consumed around: {round(co2_consumed_per_flight, 2)} kg of CO2")
-    print(f"Current CO2 budget left: {round(user_data.co2_budget, 2)} kg")
+    print(f"Your flight from {user_data.current_airport} to {chosen_airport} consumed around: {round(co2_consumed_per_flight, 2)} kg of CO2.")
+    print(f"Current CO2 budget left: {round(user_data.co2_budget, 2)} kg \n")
+    print("""
+    
+=============================
+
+    """)
 
 
 

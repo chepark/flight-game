@@ -1,5 +1,5 @@
-# 1) airport list
-# 2) generate random airport to begin the game
+# GET A RANDOM AIRPORT TO START 
+# GENERATE AIRPORTS TO PROVIDE AS ANSWER OPTIONS 
 
 import random
 
@@ -10,23 +10,23 @@ airports = ["Amsterdam Airport Schiphol", "Berlin Brandenburg Airport", "Charles
             "Ponta Delgada", "Pulkovo Airport", "Gardermoen", "Riga International Airport", "Sheremetyevo International Airport", "Vilnius International Airport",
             "Warsaw Chopin Airport", "Zagreb Airport"]
 
-#list of airports to start the game
+# AIRPORT LIST TO START GAME
 starting_point = ["Berlin Brandenburg Airport","Geneva Cointrin International Airport", "Milan Bergamo Airport"]
 
-#3 lists of airports for a user to choose from, each list consists of 5 airports and each airport is
-#in different time zone
-
+# 3 LISTS OF AIRPORTS FOR A USER TO CHOOSE FROM
+# EACH LIST CONSISTS OF 5 AIRPORTS​
+# ANE EACH AIRPORT IS IN DIFFERENT TIME ZONE.
 airport_list1 = ["Ponta Delgada", "London Gatwick Airport","Oslo Airport","Helsinki Vantaa Airport", "Sheremetyevo International Airport"]
 airport_list2 = ["Jan Mayensfield", "Funchal","Amsterdam Airport Schiphol", "Lennart Meri Tallinn Airport","Minsk National Airport" ]
 airport_list3 =["Ittoqqortoormiit", "Gran Canaria Airport","Warsaw Chopin Airport","Lviv International Airport", "Pulkovo Airport"]
 lists_of_airports = ([airport_list1],[airport_list2],[airport_list3])
 
-#returns a starting point airport
+# RETURN A STARTING POINT AIRPORT
 def get_random_airport():
     current_airport = random.choice(starting_point)
     return current_airport
 
-#generates lists of airports to choose from
+# GENERATE LISTS OF AIRPORTS TO CHOOSE FROM
 def generate_answer_options():
     random_num =  (random.randint(1, 3))
     answer_options = 1
@@ -36,8 +36,7 @@ def generate_answer_options():
         answer_options = airport_list2
     elif random_num == 3:
         answer_options = airport_list3
-    #print(f"Choose the airport from the list: {answer_options}")
     return answer_options
 
-#print(get_random_airport())
+
 
