@@ -15,7 +15,7 @@ starting_point = ["Berlin Brandenburg Airport","Geneva Cointrin International Ai
 
 #3 lists of airports for a user to choose from, each list consists of 5 airports and each airport is
 #in different time zone
-
+#
 airport_list1 = ["Ponta Delgada", "London Gatwick Airport","Oslo Airport","Helsinki Vantaa Airport", "Sheremetyevo International Airport"]
 airport_list2 = ["Jan Mayensfield", "Funchal","Amsterdam Airport Schiphol", "Lennart Meri Tallinn Airport","Minsk National Airport" ]
 airport_list3 =["Ittoqqortoormiit", "Gran Canaria Airport","Warsaw Chopin Airport","Lviv International Airport", "Pulkovo Airport"]

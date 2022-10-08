@@ -1,6 +1,6 @@
 # 1) take user name
 # 2) take user airport selection
-
+#
 import rand_airport
 
 def get_user_name():
