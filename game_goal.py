@@ -8,14 +8,17 @@
 from datetime import datetime, timedelta, time
 import random
 import current_time
+import user_data
 
 #take initial time from current_time file
-init_hour = current_time.init_hour
-init_min = current_time.init_min
+# init_hour = current_time.init_hour
+# init_min = current_time.init_min
 
-init_time = datetime.strptime(f"{init_hour}:{init_min}:00", "%H:%M:%S")
+# init_time = datetime.strptime(f"{init_hour}:{init_min}:00", "%H:%M:%S")
 
-def list_of_time_goals():
+def list_of_time_goals(airport_time):
+    init_time = datetime.strptime(f"{airport_time['hour']}:{airport_time['min']}:00", "%H:%M:%S")
+
     time1 = init_time + timedelta(hours=2)
     time1 = time1.time().strftime('%H:%M')
     time2 = init_time + timedelta(hours=1)
@@ -30,12 +33,15 @@ def list_of_time_goals():
     return list_of_time
 
 #this function is used to generate time goal within our limit
+# ?? Where is this function used? 
 def generate_random_timegoal ():
     time_goal = random.choice (list_of_time_goals())
-    print(f"Find in which airort the time is: {time_goal}")
+    print(f"Find in which airort the time is: {time_goal}. ")
 
 
-def generate_rand_time_dif():
+def generate_rand_time_dif(airport_time):
+    init_time = datetime.strptime(f"{airport_time['hour']}:{airport_time['min']}:00", "%H:%M:%S")
+    
     #generate random number to generate the goal
     random_dif =  (random.randint(-2, 2))
 
@@ -44,20 +50,27 @@ def generate_rand_time_dif():
         delta = timedelta(hours=random_dif)
         new_goal = init_time + delta
         new_goal = new_goal.time().strftime('%H:%M')
-        print(f"The new goal time is: {new_goal}")
+        print(f"The new goal time is: {new_goal}. \n")
         return new_goal
 
     elif random_dif<=0:
         delta = timedelta(hours=random_dif)
         new_goal = init_time - delta
         new_goal = new_goal.time().strftime('%H:%M')
-        print(f"The new goal time is: {new_goal}")
+        print(f"The new goal time is: {new_goal} \n")
         return new_goal
 
 
 #this function can be used only in the beginning! because +2/-2 can end up out of our current range
-def generate_game_goal():
-    print(f"Choose the airport where the local time is: {generate_rand_time_dif()}")
+def generate_game_goal(airport_time):
+    
+    if user_data.total_trials == 0: 
+        goal_time = generate_rand_time_dif(airport_time)
+        print(f"Choose the airport where the local time is {goal_time} from the list below.")
+    else: 
+        goal_time = generate_game_goal()
+    
+    return goal_time
 
 
 #generate_game_goal()
