@@ -1,10 +1,10 @@
-# 1) take user name
-# 2) take user airport selection
+# TAKE USER'S NAME AND USER'S CHOICE 
 
 import rand_airport
 
 def get_user_name():
     name = (input("Enter your name: ")).title()
+    return name
 
 #this part takes user input to know the name of the next airport where the user goes
 def choose_your_destination():
@@ -27,8 +27,7 @@ def choose_your_destination():
         new_location = airport_list[3];
     elif choice == 5:
         new_location = airport_list[4];
-    print("You are now in ", new_location)
+    print("\nYou are now in ", new_location, '.')
     return new_location
 
-#new_location = choose_your_destination()
 
