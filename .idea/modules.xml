@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/flight game.iml" filepath="$PROJECT_DIR$/.idea/flight game.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/FlightGame Project.iml" filepath="$PROJECT_DIR$/.idea/FlightGame Project.iml" />
+>>>>>>> feature
     </modules>
   </component>
 </project>
