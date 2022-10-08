@@ -13,6 +13,6 @@ def fail(time_gap):
     print(failure_message)
 
 def game_over():
-    game_over_message = (f"Now, your co2 budget is OVER.\n"
+    game_over_message = (f"\nNOW THE GAME IS OVER.\n"
                         f"You have visited {user_data.total_visited_airports} airports.\n")
     print(game_over_message)
