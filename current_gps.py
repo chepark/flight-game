@@ -2,6 +2,7 @@
 # - use DB
 
 import mysql.connector
+import _creds
 
 airport_latitude = 0
 airport_longitude = 0
@@ -16,19 +17,25 @@ def get_chosen_airport_gps(airport_name):
     result = cursor.fetchall()
     if cursor.rowcount > 0:
         for row in result:
-            print(f"This is {row[0]} airport, which has latitude is {row[1]} and longitude is {row[2]}.")
+            # Limit floats to two decimals
+            latitude =  round(row[1], 2)
+            longitude = round(row[2], 2)
+            print(f"This is {row[0]} airport, which has latitude is {latitude} and longitude is {longitude}.")
+            
             airport_latitude = row[1]
             airport_longitude = row[2]
-    return [row[1], row[2]]
+    return [airport_latitude, airport_longitude]
 
 
-# Main program
+# connect to DB
+# !! password value is changed to "_creds.db_password"
+# !! database value is changed to "_creads.db_name". 
 connection = mysql.connector.connect(
          host='127.0.0.1',
          port= 3306,
-         database='flight_game2',
+         database=_creds.db_name,
          user='root',
-         password='manager',
+         password=_creds.db_password,
          autocommit=True
          )
 # Player enter airport name to get data of latitude and longitude
