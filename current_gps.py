@@ -1,6 +1,6 @@
 import mysql.connector
 import _creds
-import user_data
+import user
 
 def get_chosen_airport_gps(airport_name):
     sql = "SELECT name, latitude_deg, longitude_deg FROM Airport"
@@ -15,7 +15,7 @@ def get_chosen_airport_gps(airport_name):
             latitude =  round(row[1], 2)
             longitude = round(row[2], 2)
 
-            if not user_data.new_location:
+            if not user.new_location:
                 print(f"This is {row[0]} airport, which has latitude is {latitude} and longitude is {longitude}. \n")
             
             global airport_latitude
