@@ -8,7 +8,7 @@
 from datetime import datetime, timedelta, time
 import random
 import current_time
-import user_data
+import user
 
 #take initial time from current_time file
 # init_hour = current_time.init_hour
@@ -63,7 +63,7 @@ def generate_rand_time_dif(airport_time):
 
 #this function can be used only in the beginning! because +2/-2 can end up out of our current range
 def generate_game_goal(airport_time):
-    if user_data.total_trials == 0: 
+    if user.total_trials == 0: 
         goal_time = generate_rand_time_dif(airport_time)
         print(f"Choose the airport where the local time is {goal_time} from the list below.")
     else: 

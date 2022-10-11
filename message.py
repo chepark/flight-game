@@ -1,5 +1,5 @@
 
-import user_data
+import user
 
 def success(): 
     success_message=(f"\nHooray! You made it.")
@@ -8,11 +8,11 @@ def success():
 
 def fail(time_gap): 
     failure_message = (f"\nSorry! You are in the wrong time zone." 
-                    f"\nThe time gap between {user_data.current_airport} and {user_data.new_location} is {time_gap} hour(s)."
+                    f"\nThe time gap between {user.current_airport} and {user.new_location} is {time_gap} hour(s)."
                 )
     print(failure_message)
 
 def game_over():
-    game_over_message = (f"Now, your co2 budget is OVER.\n"
-                        f"You have visited {user_data.total_visited_airports} airports.\n")
+    game_over_message = (f"\nNOW THE GAME IS OVER.\n"
+                        f"You have visited {user.total_visited_airports} airports.\n")
     print(game_over_message)

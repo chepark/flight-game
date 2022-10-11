@@ -1,17 +1,17 @@
-import user_data
+import user
 import message
 from geopy.distance import geodesic as GD
 from current_gps import get_chosen_airport_gps
 
 def calculate_co2(): 
-    current_location = get_chosen_airport_gps(user_data.current_airport)
-    new_location = get_chosen_airport_gps(user_data.new_location)
-    chosen_airport = user_data.new_location
+    current_location = get_chosen_airport_gps(user.current_airport)
+    new_location = get_chosen_airport_gps(user.new_location)
+    chosen_airport = user.new_location
 
     co2_consumed_per_km = 0.115
 
-    if user_data.co2_budget > 0:
-        user_data.total_visited_airports += 1
+    if user.co2_budget > 0:
+        user.total_visited_airports += 1
 
         # CONVERT DECIMAL STR TO NUMBERS.
         current_gps_set = (float(current_location[0]), float(current_location[1]))
@@ -19,23 +19,23 @@ def calculate_co2():
 
         # CALCULATE DISTANCE BETWEEN TWO AIRPORTS.
         distance = GD(current_gps_set, new_gps_set).km
-        print(f"\nThe distance between {chosen_airport} and {user_data.current_airport} is around: ", round(distance, 2), "km")
+        print(f"\nThe distance between {chosen_airport} and {user.current_airport} is around: ", round(distance, 2), "km")
        
         # CALCULATED COMSUMED AND AVAILABLE C02.
         co2_consumed_per_flight = distance * co2_consumed_per_km
-        user_data.co2_budget = user_data.co2_budget - co2_consumed_per_flight
+        user.co2_budget = user.co2_budget - co2_consumed_per_flight
 
-    if user_data.co2_budget < 0:
+    if user.co2_budget < 0:
         message.game_over()
         
     # UPDATE current_airport AFTER EACH FLIGHT
-    user_data.current_airport = chosen_airport
+    user.current_airport = chosen_airport
 
     # RESET chosen_airport
-    user_data.new_location = ""
+    user.new_location = ""
 
-    print(f"Your flight from {user_data.current_airport} to {chosen_airport} consumed around: {round(co2_consumed_per_flight, 2)} kg of CO2.")
-    print(f"Current CO2 budget left: {round(user_data.co2_budget, 2)} kg \n")
+    print(f"Your flight from {user.current_airport} to {chosen_airport} consumed around: {round(co2_consumed_per_flight, 2)} kg of CO2.")
+    print(f"Current CO2 budget left: {round(user.co2_budget, 2)} kg \n")
     print("""
     
 =============================
