@@ -50,14 +50,14 @@ def generate_rand_time_dif(airport_time):
         delta = timedelta(hours=random_dif)
         new_goal = init_time + delta
         new_goal = new_goal.time().strftime('%H:%M')
-        print(f"The new goal time is: {new_goal}. \n")
+        print(f"NEW GOAL TIME: {new_goal}. \n")
         return new_goal
 
     elif random_dif<=0:
         delta = timedelta(hours=random_dif)
         new_goal = init_time - delta
         new_goal = new_goal.time().strftime('%H:%M')
-        print(f"The new goal time is: {new_goal} \n")
+        print(f"NEW GOAL TIME: {new_goal} \n")
         return new_goal
 
 
