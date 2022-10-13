@@ -18,12 +18,12 @@ This is a text-based game and it helps users to learn about different time and t
 - `user.py` - The user's key information in order to proceed the game.
 - `current_gps.py` - Get the longitude and latitude of an airport. DB is connected in this file.
 - `current_time.py` - Calculate the current time of the airport.
-- `game_goal` - All logics to generate a game goal (time in a different time zone).
+- `game_goal.py` - All logics to generate a game goal (time in a different time zone).
 - `rand_airport.py` - Logics to generate a random airport or a list of airports.
-- `user_input` - Functions to take user's inputs.
+- `user_input.py` - Functions to take user's inputs.
 - `co2.py` - Calculate the user's co2 budget left.
 - `message.py` - All messages(success, failure, game over) to provide as feedback to the user.
-- `lib` - Miscellaneous functions used in the project.
+- `lib.py` - Miscellaneous functions used in the project.
 
 ## ⚙️ Running the project locally
 
