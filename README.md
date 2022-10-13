@@ -29,7 +29,21 @@ This is a text-based game and it helps users to learn about different time and t
 
 ```
 git clone https://github.com/chepark/flight-game.git
+```
+
+Change the values of `db_name` and `db_password` in the `_creds.py`file.
+
+```
 cd _main.py
 ```
 
-Then run the \_main.py file in your code editor.
+Then run the `_main.py` file in your code editor.
+
+📌 The following modules need to be installed if they are not in your local machine.
+
+- geopy
+- mysql
+- requests
+- json
+- datetime
+- random
