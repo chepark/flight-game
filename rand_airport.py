@@ -7,7 +7,7 @@ airports = ["Amsterdam Airport Schiphol", "Berlin Brandenburg Airport", "Charles
             "Copenhagen Kastrup Airport", "Dublin Airport", "Funchal Heliport", "Geneva Cointrin International Airport", "Gran Canaria Airport",
             "Helsinki Vantaa Airport", "Ittoqqortoormiit Heliport", "Jan Mayensfield","Lennart Meri Tallinn Airport", "Lviv International Airport",
             "London Gatwick Airport",  "Luxembourg-Findel International Airport", "Milan Bergamo Airport","Minsk National Airport",  "Oslo Airport, Gardermoen",
-            "Ponta Delgada", "Pulkovo Airport", "Gardermoen", "Riga International Airport", "Sheremetyevo International Airport", "Vilnius International Airport",
+            "João Paulo II Airport", "Pulkovo Airport", "Gardermoen", "Riga International Airport", "Sheremetyevo International Airport", "Vilnius International Airport",
             "Warsaw Chopin Airport", "Zagreb Airport"]
 
 # AIRPORT LIST TO START GAME
@@ -16,7 +16,7 @@ starting_point = ["Berlin Brandenburg Airport","Geneva Cointrin International Ai
 # 3 LISTS OF AIRPORTS FOR A USER TO CHOOSE FROM
 # EACH LIST CONSISTS OF 5 AIRPORTS​
 # ANE EACH AIRPORT IS IN DIFFERENT TIME ZONE.
-airport_list1 = ["Ponta Delgada", "London Gatwick Airport","Oslo Airport, Gardermoen","Helsinki Vantaa Airport", "Sheremetyevo International Airport"]
+airport_list1 = ["Ittoqqortoormiit Heliport", "London Gatwick Airport","Oslo Airport, Gardermoen","Helsinki Vantaa Airport", "Sheremetyevo International Airport"]
 airport_list2 = ["Jan Mayensfield", "Funchal Heliport","Amsterdam Airport Schiphol", "Lennart Meri Tallinn Airport","Minsk National Airport" ]
 airport_list3 =["Ittoqqortoormiit Heliport", "Gran Canaria Airport","Warsaw Chopin Airport","Lviv International Airport", "Pulkovo Airport"]
 lists_of_airports = ([airport_list1],[airport_list2],[airport_list3])

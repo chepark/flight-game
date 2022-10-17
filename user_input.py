@@ -28,7 +28,7 @@ def choose_your_destination():
         new_location = airport_list[3];
     elif choice == 5:
         new_location = airport_list[4];
-    print("\nYou are now in ", new_location, '.')
+    print("\nYou are now in", new_location,'.')
     return new_location
 
 

@@ -16,7 +16,7 @@ def get_chosen_airport_gps(airport_name):
             longitude = round(row[2], 2)
 
             if not user.new_location:
-                print(f"This is {row[0]} airport, which has latitude is {latitude} and longitude is {longitude}. \n")
+                print(f"This is {row[0]} where latitude is {latitude} and longitude is {longitude}. \n")
             
             global airport_latitude
             global airport_longitude

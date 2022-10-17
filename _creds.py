@@ -1,2 +1,2 @@
-db_name="YOUR DB NAME"
-db_password = 'YOUR DB PASSWORD'
+db_name="flight_game"
+db_password = '1111'
