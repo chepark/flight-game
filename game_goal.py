@@ -14,8 +14,6 @@ import user
 # init_hour = current_time.init_hour
 # init_min = current_time.init_min
 
-# init_time = datetime.strptime(f"{init_hour}:{init_min}:00", "%H:%M:%S")
-
 def list_of_time_goals(airport_time):
     init_time = datetime.strptime(f"{airport_time['hour']}:{airport_time['min']}:00", "%H:%M:%S")
 
@@ -33,8 +31,8 @@ def list_of_time_goals(airport_time):
     return list_of_time
 
 # check whatsapp
-def generate_random_timegoal ():
-    time_goal = random.choice (list_of_time_goals())
+def generate_random_timegoal (airport_time):
+    time_goal = random.choice (list_of_time_goals(airport_time))
     print(f"Find in which airort the time is: {time_goal}. ")
     return time_goal
 
@@ -67,6 +65,6 @@ def generate_game_goal(airport_time):
         goal_time = generate_rand_time_dif(airport_time)
         print(f"Choose the airport where the local time is {goal_time} from the list below.")
     else: 
-        goal_time = generate_random_timegoal()
+        goal_time = generate_random_timegoal(airport_time)
     return {'time': goal_time}
 

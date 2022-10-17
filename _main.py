@@ -17,6 +17,8 @@ if user.total_trials == 0:
     user.current_airport = get_random_airport()
 
 def play_game():
+    user.total_trials += 1
+    
     airport_gps = get_chosen_airport_gps(user.current_airport)
     airport_time = get_airport_time(airport_gps[0], airport_gps[1])
     goal = generate_game_goal(airport_time)
@@ -39,6 +41,7 @@ def play_game():
     
     # CALCULATE CO2
     co2.calculate_co2()
+    
 
 while user.co2_budget > 0: 
     play_game()
